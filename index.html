@@ -9,6 +9,11 @@
 </head>
 
 <body>
+
+  <div class="particulas"></div>
+
+
+
   <nav class="navegacao">
     <ul class="menu">
       <li>
@@ -66,12 +71,12 @@
       </div>
 
       <div class="projetos-cards">
-        
-          <img src="/imagens/perfil.PNG" alt="projeto 1" class="projetos-imagem">
-          <div class="caixa-textos-projetos">
-            <h3 class="info-projeto">titulo 3</h3>
-            <p class="paragrafo-projetos">loja virtual moderna</p>
-          </div>
+
+        <img src="/imagens/perfil.PNG" alt="projeto 1" class="projetos-imagem">
+        <div class="caixa-textos-projetos">
+          <h3 class="info-projeto">titulo 3</h3>
+          <p class="paragrafo-projetos">loja virtual moderna</p>
+        </div>
       </div>
 
     </div>
@@ -80,18 +85,45 @@
   <section id="contatos" class="contatos">
     <h2 class="contatos-titulo">Entre em contato</h2>
 
-    <form class="formulario-contato" id="formulario">
+    <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
       <div class="grupo-form">
-        <input placeholder="Nome" class="campo-form">
+        <input placeholder="Nome" class="campo-form" id="nome">
       </div>
 
       <div class="grupo-form">
-        <textarea class="campo-form" placeholder="Digite sua mensagem"></textarea>
+        <textarea class="campo-form" placeholder="Digite sua mensagem" id="mensagem"></textarea>
       </div>
 
       <button type="submit" class="botao-form">Enviar Whatsapp</button>
     </form>
   </section>
+
+  <script>
+
+    function enviarWhats(event) {
+
+      event.preventDefault()
+
+      const nome = document.getElementById('nome').value;
+      const mensagem = document.getElementById('mensagem').value;
+      const telefone = '5512991884575'
+
+      const texto = 'Olá! Me chamo ${nome}, ${mensagem}'
+      const msgFormatada = encodeURIComponent(texto)
+
+      const url = 'https://wa.me/${telefone}?text=${msgFormatada}'
+
+      window.open(url, '_blank')
+    }
+
+
+
+
+
+
+
+
+  </script>
 
 
 
