@@ -139,6 +139,14 @@ body {
   justify-content: center;
 }
 
+.curso-titulo{
+  display: flex;
+  justify-content: center;
+  padding: 70px;
+  font-size: 2.5rem;
+  
+}
+
 .curriculo{
   display: flex;
   justify-content: center;
@@ -237,6 +245,7 @@ body {
 
 .contatos-titulo {
   text-align: center;
+  font-size: 2.5rem;
 }
 
 .formulario-contato {
@@ -285,7 +294,7 @@ body {
 }
 
 .icone-imagem{
-  height: 50px;
+  height: 70px;
   display: flex;
   justify-content: center;
   justify-content: space-around;
