@@ -1,2 +1,2 @@
 # new_portifolio
-Projeto de portfolio para faculdade
+Projeto de portfólio para faculdade
