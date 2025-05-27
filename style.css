@@ -332,3 +332,10 @@ body {
     transform: translateY(-20px);
   }
 }
+
+.botao{
+  padding: 10px 10px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+}
